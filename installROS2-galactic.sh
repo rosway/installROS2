@@ -69,7 +69,8 @@ python3 -m pip install -U \
 		flake8-quotes \
 		pytest-repeat \
 		pytest-rerunfailures \
-		pytest
+		pytest \
+		importlib-metadata importlib-resources
 
 # compile yaml-cpp-0.6, which some ROS packages may use (but is not in the 18.04 apt repo)
 git clone --branch yaml-cpp-0.6.0 https://github.com/jbeder/yaml-cpp yaml-cpp-0.6 && \

@@ -11,7 +11,7 @@
 # 
 
 ROS_PKG=ros_base
-ROS_DISTRO=foxy
+ROS_DISTRO=galactic
 # Core ROS2 workspace - the "underlay"
 ROS_ROOT=/opt/ros/${ROS_DISTRO}
 
@@ -33,7 +33,7 @@ sudo rm -rf /var/lib/apt/lists/*
     
 wget --no-check-certificate https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc 
 sudo apt-key add ros.asc
-sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture)] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
+sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture)] https://repo.huaweicloud.com/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
 
 # install development packages
 sudo apt-get update
